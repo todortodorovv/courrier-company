@@ -10,21 +10,17 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
+
+        Parent root = FXMLLoader.load(getClass().getResource("mainUI.fxml"));
+        root.getStylesheets().add(getClass().getResource("elementsStyling.css").toExternalForm());
+        primaryStage.setTitle("Courier Application");
+        primaryStage.setScene(new Scene(root, 650, 550));
         primaryStage.show();
     }
 
 
     public static void main(String[] args) {
         launch(args);
-
-        System.out.println("heyyyyyy");
-        System.out.println("heyyyyyy");
-        System.out.println("heyyyyyy");
-        System.out.println("heyyyyyy");
-        System.out.println("heyyyyyy");
 
     }
 }
